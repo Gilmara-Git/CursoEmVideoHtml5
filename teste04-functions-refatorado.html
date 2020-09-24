@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"> 
+
+<head>
+
+    <title>Teste JavaScript  - REFATORADO </title>
+    <meta charset="UTF-8"/>
+
+       <script>
+
+        let allowChangeState = true
+
+        function mudaLampada(type) {
+                              
+            if(allowChangeState) {
+                document.getElementById("light").src ="_imagens/"+ type + ".jpg";
+
+                    if (type == "lampada-quebrada") {
+
+                       allowChangeState=false
+                    }
+
+            }
+           
+        }
+
+       
+    </script>
+
+    <style>
+        h1 {
+
+            text-align: center;
+        }
+
+        img {
+
+            
+            padding: 100px 860px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h1>Mudando os estados da Lampada</h1>
+    <img src="_imagens/lampada-apagada.jpg" id="light" onmousemove="mudaLampada('lampada-acesa')" 
+    onmouseout="mudaLampada('lampada-apagada')"  onclick="mudaLampada('lampada-quebrada')"/>
+                                                        
+
+</body>
+
+
+
+</html>

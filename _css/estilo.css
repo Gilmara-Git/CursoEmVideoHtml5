@@ -1,0 +1,370 @@
+
+@charset "UTF-8";
+@font-face {
+ font-family:'FonteLogo' ;
+ src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+@import "https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap";
+
+
+body {
+    background-color: #dddddd;
+    color: rgba(0,0,0,1);
+    font-family: "Arial" , sans-serif;
+}
+
+p {
+    text-align:justify;
+    text-indent: 50px;
+}
+
+a {
+color:#606060;
+text-decoration: none;
+
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+div#interface {
+    width: 1040px; /*1200px*/
+    background-color: #ffffff;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px black;
+    padding: 10px;
+    position: relative;
+
+}
+
+header#cabecalho {
+
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px ;
+}
+
+header#cabecalho h1 {
+
+    font-family: 'FonteLogo', sans-serif;
+    font-style: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    padding: 0px;
+    margin-bottom:0px;
+}
+
+header#cabecalho h2 {
+
+    font-family: 'Titillium Web', sans-serif;;
+    color:#888888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top:0px;
+
+}
+
+header#cabecalho img#icone {
+
+    position: absolute; 
+    left:900px;
+    top:80px;
+
+}
+
+
+/* Formatacao de imagens com legendas */
+
+figure.foto-legenda {
+
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px rgba(0,0,0,5);
+    position: relative;
+ 
+
+}
+
+figure.foto-legenda img { 
+
+    width: 100%;
+    height: 100%;
+
+}
+
+figure.foto-legenda figcaption {
+
+    position: absolute;
+    top:0px; 
+    color: white;    
+    background-color:rgba(0,0,0, 0.4);
+    width:100%;
+    height:100%;
+    padding:10px;
+    box-sizing:border-box;
+    opacity:0;
+    transition: opacity 1s;
+
+}   
+
+figure.foto-legenda figcaption:hover {
+    opacity:1;
+  
+}
+
+/* Formatacao do Menu*/
+/* Para esse menu flutar precisar fazer que o nav#menu flutue pela tela (display:block)*/
+/* Make nav#menu float */
+
+
+nav#menu {
+
+    display: block;
+}
+
+
+nav#menu ul {
+
+    list-style:none;
+    text-transform: uppercase;
+    position: absolute;
+    top:-6px;
+    left:300px;
+    
+}
+
+nav#menu li:hover { 
+
+    background-color: #606060;
+    
+    }
+nav#menu li {
+
+    display: inline-block;
+    background-color: #dddddd;
+    padding:10px;
+    margin:2px; 
+    transition: background-color 1s;
+    /* prefixr.com - generate the code for transition: background-color 1s; to work in older browsers */
+    -webkit-transition: backgroung-color 1s;
+    -moz-transtion:background-color 1s;
+    -moz-transtion:background-color 1s;
+    -ms-transition: background-color 1s;
+    
+}
+
+
+
+/* Hide Main Menu title*/ 
+nav#menu h1 {
+
+    display:none;
+    
+}
+
+nav#menu a {
+
+    color: black;
+    text-decoration: none;
+}
+
+nav#menu a:hover{
+
+    color: white;
+    text-decoration: underline;
+
+}
+/* Section (left content), aside (right content) and footer -  */
+
+section#corpo { 
+
+    display:block; /* to be shown as a block*/
+    width: 550px;
+    float: left; /* aside goes to the left side*/
+    border-right: 1px solid #606060;
+    padding-right: 15px;
+
+}
+
+
+header#cabecalho-article h1 {
+font-family: "FonteLogo", sans-serif;
+color:#606060;
+font-size: 20pt;
+margin-bottom: 0px;
+
+}
+
+
+header#cabecalho-article h2#titulo-h2-cabecalho {
+
+    font-size: 13pt;
+    color: #cecece;
+    margin-top: 0px;
+    background-color: #ffffff;
+
+
+}
+
+header#cabecalho-article h3 {
+
+    font-size: 12pt;
+    color: #606060;
+
+}
+
+.direita {
+
+    text-align: right;
+}
+
+
+article#noticia-principal h2 {
+
+    font-size: 13pt;
+    color:606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px  0px 10px 0px;;
+
+
+}
+
+
+table#tabelaspec caption {
+
+    color:#888888;
+    font-size: 13pt;
+    font-weight: bold;
+    
+}
+
+table#tabelaspec caption span {
+
+        display:block; /* Vai ser um bloco flutuante - desconectara do texto */
+        float: right;
+        color: #000000;
+        font-size:8pt;
+                margin-top: 10px;
+}
+
+table#tabelaspec {
+
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+table#tabelaspec  td{
+
+    border: 1px solid #606060;
+    padding:10px;
+    text-align:right;
+    vertical-align: middle;
+
+}
+
+table#tabelaspec  td.left{
+
+    text-align:right;
+    vertical-align: top;
+    background-color: #606060;
+    color:#ffffff;
+    font-weight: bold;
+    
+   
+
+}
+
+table#tabelaspec  td.right{
+
+    text-align:left;
+    background-color: #ccc9c9;  
+    font-size: 18px;  
+    
+   
+
+}
+
+/* Aside configurations*/ 
+
+aside#lateral {
+    display:block; /* to be shown as a block*/
+    width: 350px;
+    float: right; /* aside goes to the right side*/
+    background-color:#dddddd ;
+    padding: 10px;
+    margin-top:10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,5);
+    
+
+}
+
+aside#lateral h1 {
+
+font-family: "FonteLogo";
+font-size: 20pt;
+color: #606060;
+margin-top:0px;
+
+}
+
+aside#lateral h2 {
+
+background-color: #606060;
+font-size: 13pt;
+color:white;
+padding: 5px;
+    
+}
+
+
+/* Footer configuration */
+footer#rodape {
+
+    clear:both;
+    border-top: 1px solid #606060;
+
+}
+
+
+footer#rodape p {
+
+    text-align: center;
+    margin-bottom:1pt;
+
+
+}
+
+footer#rodape a {
+
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    padding:0.3px;
+    background-color: #a3a0a0;
+    border-radius: 0px 6px;
+    letter-spacing: 0.5px;
+    margin-top:2pt;
+    
+}
+
+footer#rodape a:hover {
+
+color: rgba(0,0,0,1);
+background-color: white;
+transition: 1.5s;
+
+}
+
+video#oneday {
+
+    width: 100%;
+}
+
+video#howitfeels {
+
+    width: 100%;
+}

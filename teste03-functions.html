@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"> 
+
+<head>
+
+    <title>Teste JavaScript 3</title>
+    <meta charset="UTF-8"/>
+
+    <style>
+        /*body {
+            
+            background-Image:url("_imagens/lampada-apagada.jpg")
+        }*/
+
+    </style>
+
+    <script>
+
+        let allowChangeState = true
+
+        function mudaLampada (type) {
+
+            
+            if(type==1){
+               
+               file="_imagens/lampada-acesa.jpg"  
+
+            }
+            
+            if (type==2) { 
+
+                file="_imagens/lampada-apagada.jpg"
+            }
+
+            if(type==3) {
+
+                file="_imagens/lampada-quebrada.jpg"
+                
+            }
+            
+            if(allowChangeState) {
+            document.getElementById("light").src = file
+
+                    if (type==3) {
+
+                       allowChangeState=false
+                    }
+
+            }
+           
+        }
+
+       
+    </script>
+
+</head>
+
+<body>
+    <h1>Acenda Lampada</h1>
+    <img src="_imagens/lampada-apagada.jpg" id="light" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2) " onclick="mudaLampada(3)"/>
+                                                        
+
+</body>
+
+
+
+</html>
